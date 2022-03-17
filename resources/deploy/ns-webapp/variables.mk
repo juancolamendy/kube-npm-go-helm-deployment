@@ -1,0 +1,13 @@
+# Global variables
+## Input
+CODE_ENTRY=
+BIN_DIR=
+APP_NAME=ns-webapp
+NAMESPACE=namespace
+PORT=3000
+
+DOCKER_REGISTRY=https://index.docker.io/v1/
+DOCKER_USERNAME=
+DOCKER_EMAIL=
+DOCKER_PASSWORD=
+DOCKER_REPOSITORY=
