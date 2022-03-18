@@ -214,7 +214,12 @@ helm-list:
 .PHONY: helm-delete
 helm-delete:
 	@echo "--- Helm delete" ;\
-	helm delete --purge ${APP_NAME} --kubeconfig ${KUBECONFIG}
+	helm uninstall ${APP_NAME} --kubeconfig ${KUBECONFIG} --namespace=$(NAMESPACE)
+
+.PHONY: helm-rollback
+helm-rollback:
+	@echo "--- Helm rollback" ;\
+	helm rollback ${APP_NAME} 0 --namespace=${NAMESPACE} --kubeconfig ${KUBECONFIG}
 
 .PHONY: kube-ls-pod
 kube-ls-pod:
