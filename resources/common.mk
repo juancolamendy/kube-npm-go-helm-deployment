@@ -115,8 +115,8 @@ go-clean:
 
 ## Tag
 .PHONY: create-tag
-create-tag:
-	@echo "--- Creating tag" ;\
+create-initial-tag:
+	@echo "--- Creating initial tag" ;\
 	git tag -a v0.0.1 -m"init version" ;\
 	git push --tags
 
